@@ -68,11 +68,11 @@ def classify_images(images_dir, results_dic, model):
     for key in results_dic:
       img_path = images_dir + key  #fx the / here after 
       model_label = classifier(img_path, model)
-      model_label = model_label.lower()
-      new_val = [results_dic[key],model_label,0]
-      if results_dic[key] in model_label:
-        new_val[2] = 1
-      results_dic[key] = new_val
+      model_label = model_label.lower().strip()
+      results_dic[key].extend([model_label,0])
+      if results_dic[key][0] in model_label:
+        results_dic[key][2] = 1
+      
 
 
 #images_dir = "/workspace/cd0184/9664b117-d773-4799-b6a3-d4640ed70218/data/pet_images"

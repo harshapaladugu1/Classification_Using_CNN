@@ -93,7 +93,7 @@ def calculates_results_stats(results_dic):
             results_stats_dic['n_dogs_img'] += 1
             if results_dic[key][4] == 1:
                 results_stats_dic['n_correct_dogs']  += 1                
-        if results_dic[key][3] ==  0 & results_dic[key][4] ==  0:
+        if results_dic[key][3] ==  0 and results_dic[key][4] ==  0:
             results_stats_dic['n_correct_notdogs'] += 1    
     results_stats_dic['n_notdogs_img'] = results_stats_dic['n_images'] - results_stats_dic['n_dogs_img']
     results_stats_dic['pct_match'] = (results_stats_dic['n_match']/results_stats_dic['n_images'])*100.0

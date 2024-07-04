@@ -45,14 +45,14 @@ def get_pet_labels(image_dir):
     in_files = listdir(image_dir)
     results_dic = dict()
     for file in file_list:
-      if file not in results_dic:
+      if file not in results_dic and file[0]!=".":
         label_parts = file.split("_")
         pet_label = "" 
         for part in label_parts:
           if(part.isalpha()):
             pet_label =pet_label+part+" "
         pet_label = pet_label.lower().strip()
-        results_dic[file] = pet_label
+        results_dic[file] = [pet_label] 
 
 
     # Replace None with the results_dic dictionary that you created with this
