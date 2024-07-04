@@ -1,0 +1,23 @@
+Questions regarding Uploaded Image Classification:
+
+1. Did the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed? If not, report the differences in the classifications.
+
+Answer: No. While the VVG model architecture was able to correctly identify the breed of the dog in Dog_01.jpg the two other architectures incorrectly classified the breed as tibetan terrier, chrysanthemum dog.
+
+
+2. Did each of the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg? If not, report the differences in the classifications.
+
+Answer: No. Again the VGG model architecture showed better ability in classification as it correctly identified the breed of the dog in Dog_01.jpg as well as Dog_02.jpg. The RESNET model architecture did not classify the
+two images to be the same but did better at classification with the upside down JPG correctly classifying it as shih-tzu even though it classified Dog_01.jpg as Tibetan terrier, chrysanthemum dog. Lastly, the ALEXNET model 
+architecture showed to poorest ability in classification as it incorrectly classified Dog_01.jpg and also gave an irrelevant non-dog classification for Dog_02.jpg being three-toed sloth, ai, bradypus tridactylus.
+
+
+3. Did the three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg to not be dogs? If not, report the misclassifications.
+
+Answer: Yes. All three model architectures were successful in classifying the non-dog JPG's to not be dogs.
+
+
+4. Based upon your answers for questions 1. - 3. above, select the model architecture that you feel did the best at classifying the four uploaded images. Describe why you selected that model architecture as the best on uploaded image classification.
+
+Answer: Based on the answers to questions 1-3, the model architecture with the best classification ability was the VGG model architecture. This is due to the model's precise classification, correctly identifying each animal. Additionally, unlike the other 
+model architectures, the VGG model was able to correctly classify Dog_02.JPG which was just a horizontally reversed version of Dog_01.JPG.
